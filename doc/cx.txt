@@ -1,0 +1,33 @@
+*cx.nvim* Contextualize Neovim integration
+
+==============================================================================
+COMMANDS                                                        *cx-commands*
+
+:CxContexts
+  Browse registered contexts.
+
+:CxManifests
+  Alias for :CxContexts.
+
+:CxSource
+  Open the authored manifest source for the current generated context file.
+
+:CxSourceVsplit
+  Open the authored manifest source in a vertical split.
+
+==============================================================================
+SETUP                                                              *cx-setup*
+
+>lua
+  require('cx').setup({
+    command = 'contextualize',
+    picker = 'auto',
+    integrations = {
+      mini_files = true,
+    },
+  })
+<
+
+`contextualize` must be available on PATH.
+
+vim:tw=78:ts=8:noet:ft=help:norl:
